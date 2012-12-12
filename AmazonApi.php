@@ -1,4 +1,18 @@
 <?php
+
+/*
+ * ----------------------------------------------------------------------------
+ * "THE BEER-REGARDLESS-OF-APOCALYPSE-WARE LICENSE" (Revision 42 - 12/12/2012):
+ * @Travis_Wimer wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If by some miraculous chance, 
+ * the world does not end in 9 days, and we happen meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return. If the world does 
+ * end in a Mayan zombie apocalypse, as we all know it will, you are strictly 
+ * required to buy me a beer in hell. -Travis Wimer
+ * ----------------------------------------------------------------------------
+ */
+
+
 class AmazonAPI{
 	private static $instance;
 	
