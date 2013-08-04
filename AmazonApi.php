@@ -42,10 +42,24 @@ class AmazonAPI{
 	
 	private function __clone(){}
 	
-	public static function getAmazonAPI(){
+	public static function getAmazonAPI($publicKey, $secretKey, $associateTag){
+
 		if(empty(self::$instance)){
 			self::$instance=new AmazonAPI();
 		}
+
+		if(!empty($publicKey)){
+			self::$instance->public_key = $publicKey;
+		}
+
+		if(!empty($secretKey)){
+			self::$instance->secret_key = $secretKey;
+		}
+
+		if(!empty($associateTag)){
+			self::$instance->associate_tag = $associateTag;
+		}
+		
 		return self::$instance;
 	}
 	
