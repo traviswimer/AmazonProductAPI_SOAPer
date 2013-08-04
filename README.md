@@ -9,13 +9,13 @@ The code below shows how to search Amazon's music section for the band "Slow Mag
 
 ```php
 //Create API access object
-$public_key='YOUR PUBLIC KEY';
-$secret_key='YOUR PRIVATE KEY';
-$associate_tag='AN OPTIONAL ASSOCIATE TAG';
-$amazon_api=AmazonAPI::getAmazonAPI($public_key, $secret_key, $associate_tag);
+$public_key = 'YOUR PUBLIC KEY';
+$secret_key = 'YOUR PRIVATE KEY';
+$associate_tag = 'AN OPTIONAL ASSOCIATE TAG';
+$amazon_api = new AmazonAPI($public_key, $secret_key, $associate_tag);
 
 // Set the API request parameters
-$params_array=array(
+$params_array = array(
 	'Operation' => 'ItemSearch',
 	'SearchIndex' => 'Music',
 	'Keywords' => urlencode('Slow Magic')

@@ -1,13 +1,14 @@
 <?php
 require('../AmazonApi.php');
+
 //Create API access object
-$public_key='xxxxxxxxxxxxxxxxxxxx';
-$secret_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-$associate_tag='xxxxxxxxxxxx';
-$amazon_api=AmazonAPI::getAmazonAPI($public_key, $secret_key, $associate_tag);
+$public_key = 'YOUR PUBLIC KEY';
+$secret_key = 'YOUR PRIVATE KEY';
+$associate_tag = 'AN OPTIONAL ASSOCIATE TAG';
+$amazon_api = new AmazonAPI($public_key, $secret_key, $associate_tag);
 
 //Array of request parameters
-$params_array=array(
+$params_array = array(
 	'Operation' => 'ItemSearch',
 	'SearchIndex' => 'Music',
 	'Keywords' => urlencode('Slow Magic')
