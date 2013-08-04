@@ -31,38 +31,26 @@
 class AmazonAPI{
 	private static $instance;
 	
-	private $public_key='YOUR_PUBLIC_KEY';
-	private $secret_key='YOUR_PRIVATE_KEY';
-	private $associate_tag='YOUR_ASSOCIATE_TAG';//This is only for Amazon affiliates
+	private $public_key;
+	private $secret_key;
+	private $associate_tag;//This is only for Amazon affiliates
 	
 	private $wsdl_url='http://webservices.amazon.com/AWSECommerceService/AWSECommerceService.wsdl';
 	private $webservices_url='https://webservices.amazon.com/onca/soap?Service=AWSECommerceService';
 	
-	private function __construct(){}
-	
-	private function __clone(){}
-	
-	public static function getAmazonAPI($publicKey, $secretKey, $associateTag){
-
-		if(empty(self::$instance)){
-			self::$instance=new AmazonAPI();
-		}
-
+	public function __construct($publicKey, $secretKey, $associateTag){
 		if(!empty($publicKey)){
-			self::$instance->public_key = $publicKey;
+			$this->public_key = $publicKey;
 		}
 
 		if(!empty($secretKey)){
-			self::$instance->secret_key = $secretKey;
+			$this->secret_key = $secretKey;
 		}
 
 		if(!empty($associateTag)){
-			self::$instance->associate_tag = $associateTag;
+			$this->associate_tag = $associateTag;
 		}
-		
-		return self::$instance;
 	}
-	
 	
 	//Send a request to amazon
 	public function sendRequest($request_params){
