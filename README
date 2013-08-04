@@ -1,7 +1,7 @@
 This is an extremely simple class used to make requests to the Amazon Product API. There don't seem to be many good resources available to get people started using the API, so hopefully this code will be of help.
 
 A list of Amazon Product Advertising API operations can be found here:
-[http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_OperationListAlphabetical.html](http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_OperationListAlphabetical.html)
+http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_OperationListAlphabetical.html
 
 # Example usage
 
